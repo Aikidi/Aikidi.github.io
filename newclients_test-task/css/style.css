@@ -294,4 +294,116 @@ body {
   margin-top: auto;
 }
 
+.steps {
+  counter-reset: step;
+  padding-left: 10px;
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+
+.steps__subtitle {
+  display: block;
+  font-size: 30px;
+  line-height: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.steps__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.steps__item {
+  position: relative;
+  padding: 20px;
+  border: 2px solid #449768f5;
+  -webkit-box-shadow: 0 4px 10px #0000003a;
+  box-shadow: 0 4px 10px #0000003a;
+}
+.steps__item:nth-child(odd) {
+  background-color: #dbf3e5d1;
+}
+
+.steps__item::before {
+  position: absolute;
+  left: -26px;
+  top: calc(50% - 4px);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: block;
+  counter-increment: step;
+  content: counter(step);
+  width: 50px;
+  height: 50px;
+  border: 2px solid #449768f5;
+  background-color: #ffffff;
+  color: #449768f5;
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 600;
+  border-radius: 50%;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 12px;
+  z-index: 10;
+}
+
+.steps__item-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.steps__icon {
+  color: #449768f5;
+}
+
+.steps__item-text {
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .steps__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps__item:nth-child(odd) {
+    background-color: #ffffff;
+  }
+}
+
+@media (max-width: 768px) {
+  .steps__icon {
+    width: 85px;
+    height: 85px;
+  }
+
+  .steps__item-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 572px) {
+  .steps__list {
+    grid-template-columns: 1fr;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
