@@ -15,7 +15,7 @@ body {
 
 .content-wrapper {
   max-width: 1450px;
-  padding: 0 80px;
+  padding: 50px 80px;
   margin-right: auto;
   margin-left: auto; }
 
@@ -43,7 +43,8 @@ body {
 .container {
   padding: 40px;
   border-radius: 40px;
-  background-color: lightgray; }
+  background-color: lightgray;
+  margin-bottom: 40px; }
 
 figcaption {
   margin-bottom: 40px;
@@ -78,5 +79,31 @@ figcaption {
   .link p {
     margin: 0;
     padding: 10px 0; }
+
+.img-half-aria {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 20px; }
+  .img-half-aria .img-half-aria__option {
+    outline: 5px solid black; }
+    .img-half-aria .img-half-aria__option--1 img {
+      float: left;
+      width: 50%; }
+    .img-half-aria .img-half-aria__option--2 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .img-half-aria .img-half-aria__option--2 img {
+        width: 50%; }
+    .img-half-aria .img-half-aria__option--3 {
+      display: grid;
+      grid-template-columns: 50% 50%; }
+      .img-half-aria .img-half-aria__option--3 img {
+        width: 100%; }
+    .img-half-aria .img-half-aria__option--4 {
+      background-image: url(../img/sward.jpg);
+      background-size: 50%;
+      background-repeat: no-repeat; }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="content-wrapper">
+  <h2>Напишите html-код к данной таблице:</h2>
   <table class="table">
     <thead>
       <tr>
@@ -55,7 +56,7 @@
         </tr>
       </tbody>
   </table>
-
+  <h2>Ниже приведен пример элемента с html-кодом. Требуется написать минимальный набор стилей, необходимый для реализации данного блока (размер текста берем: 16 и 24 пикселя, цвета: серый и синий):</h2>
   <div class="container">
     <figcaption>Для нас важно, чтобы партнеры соблюдали требования политики Компании, в том числе</figcaption>  
     <div class="link">
@@ -79,5 +80,26 @@
       <p>Положений по обеспечению качества всех категорий товара</p> 
     </div>  
   </div>
+  <h2>Какими способами можно разместить изображение только на 50% рабочей области?</h2>
+  <div class="img-half-aria">
+    <div class="img-half-aria__option img-half-aria__option--1">
+      <img src="img/sward.jpg">
+      <p>Просто задать изображению "width: 50%" и "float:left"</p>
+    </div>
+    <div class="img-half-aria__option img-half-aria__option--2">
+      <img src="img/sward.jpg">
+      <p>Задать контейнеру "display: flex;" а изображению "width: 50%"</p>
+    </div>
+    <div class="img-half-aria__option img-half-aria__option--3">
+      <div>
+        <img src="img/sward.jpg">
+      </div>      
+      <p>Задать контейнеру "display: grid;" + "grid-template-columns: 50% 50%" , изображению добавить обертку + "width: 100%"</p>
+    </div>
+    <div class="img-half-aria__option img-half-aria__option--4">
+      <p>Разместить изображение в качестве фонового + задать ему "background-size: 50%" и "background-repeat: no-repeat"</p>
+    </div>
+  </div>
+  
 </body>
 </html>
